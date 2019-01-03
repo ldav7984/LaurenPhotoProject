@@ -86,7 +86,7 @@ public class Picture extends SimplePicture
     
   }
   
-  /** Method to set the blue to 0 */
+  /** Method to set the blue to 0 uisng a for-each loop*/
   public void zeroBlue()
   {
     Pixel[][] pixels = this.getPixels2D();
@@ -97,6 +97,25 @@ public class Picture extends SimplePicture
         pixelObj.setBlue(0);
       }
     }
+  }
+  
+  /** Method to set the red to 0 using a for loop*/
+  public void zeroRed()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  
+		  for (int col = 0; col < pixels[0].length; col++)
+		  {
+			 pixels[row][col].setRed(0);
+			 //OR use this
+			 //Pixel tempPixel = pixels[row][col];
+			 //tempPixel.setRed(0);
+			 //both do the same thing
+		  }
+	  }
   }
   
   /** Method to set red and green to 0 */

@@ -18,6 +18,15 @@ public class PictureTester
     beach.explore();
   }
   
+  /** Method to test zeroRed */
+  public static void testZeroRed()
+  {
+	 Picture beach = new Picture("beach.jpg");
+	 beach.explore();
+	 beach.zeroRed();
+	 beach.explore();
+  }
+  
   /** Method to test keepOnlyBlue */
   public static void testKeepOnlyBlue()
   {
@@ -87,14 +96,15 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
 	  
-    //testZeroBlue(); //done
+    testZeroBlue(); //done
+	testZeroRed(); //done
     //testKeepOnlyBlue(); //done
     //testKeepOnlyRed(); //done
     //testKeepOnlyGreen(); //done
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testMirrorVertical(); //done
+    //testMirrorVertical(); //done
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();

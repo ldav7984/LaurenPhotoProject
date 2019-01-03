@@ -12,6 +12,24 @@ public class IntArrayWorker
     matrix = theMatrix;
   }
   
+  public int getCount(int findThisNumber)
+  {
+	  int count = 0; //default
+	  
+	  for (int [] row : matrix) //takes the row out of the matrix
+	  {
+		  for (int item : row) //takes the item out of the row
+		  {
+			  if (item == findThisNumber)
+			  {
+				  count++;
+			  }
+		  }
+	  }
+	  
+	  return count;
+  }
+  
   /**
    * Method to return the total 
    * @return the total of the values in the array

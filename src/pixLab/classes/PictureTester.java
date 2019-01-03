@@ -27,6 +27,14 @@ public class PictureTester
 	 beach.explore();
   }
   
+  public static void testZeroGreen()
+  {
+	  Picture beach =  new Picture("beach.jpg");
+	  beach.explore();
+	  beach.zeroGreen();
+	  beach.explore();
+  }
+  
   /** Method to test keepOnlyBlue */
   public static void testKeepOnlyBlue()
   {
@@ -51,6 +59,24 @@ public class PictureTester
 	  Picture beach = new Picture("beach.jpg");
 	  beach.explore();
 	  beach.keepOnlyGreen();
+	  beach.explore();
+  }
+  
+  /** Method to test negate */
+  public static void testNegate()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.negate();
+	  beach.explore();
+  }
+  
+  /** Method to test grayscale */
+  public static void testGrayscale()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.grayscale();
 	  beach.explore();
   }
   
@@ -96,27 +122,32 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
 	  
-    testZeroBlue(); //done
-	testZeroRed(); //done
+    //testZeroBlue(); //done
+	//testZeroRed(); //done
+	//testZeroGreen(); //done
     //testKeepOnlyBlue(); //done
     //testKeepOnlyRed(); //done
     //testKeepOnlyGreen(); //done
-    //testNegate();
-    //testGrayscale();
+    testNegate(); //done
+    testGrayscale(); //done
     //testFixUnderwater();
+    
     //testMirrorVertical(); //done
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
+    
     //testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
+    
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
+    
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
   }

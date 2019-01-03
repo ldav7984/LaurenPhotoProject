@@ -110,10 +110,21 @@ public class Picture extends SimplePicture
 		  for (int col = 0; col < pixels[0].length; col++)
 		  {
 			 pixels[row][col].setRed(0);
-			 //OR use this
-			 //Pixel tempPixel = pixels[row][col];
-			 //tempPixel.setRed(0);
-			 //both do the same thing
+		  }
+	  }
+  }
+  
+  /** Method to set the green to 0 using a for loop*/
+  public void zeroGreen()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  
+	  for (int row = 0; row < pixels.length; row ++)
+	  {
+		  for (int col = 0; col < pixels[0].length; col++)
+		  {
+			  Pixel tempPixel = pixels[row][col];
+			  tempPixel.setGreen(0);
 		  }
 	  }
   }
@@ -158,6 +169,36 @@ public class Picture extends SimplePicture
 			  pixelObj.setRed(0);
 		  }
 	  }
+  }
+  
+  public void negate()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (Pixel[] rowArray : pixels)
+	  {
+		  for (Pixel pixelObj : rowArray)
+		  {
+			  pixelObj.setRed(255 - pixelObj.getRed());
+			  pixelObj.setGreen(255 - pixelObj.getGreen());
+			  pixelObj.setBlue(255 - pixelObj.getBlue());
+		  }
+	  }
+  }
+  
+  public void grayscale()
+  {
+	Pixel[][] pixels = this.getPixels2D();
+	for (Pixel[] rowArray : pixels)
+	{
+		for (Pixel pixelObj : rowArray)
+		{
+			int average = pixelObj.getRed() + pixelObj.getGreen() + pixelObj.getBlue();
+			average = average / 3;
+			pixelObj.setRed(average);
+			pixelObj.setGreen(average);
+			pixelObj.setBlue(average);
+		}
+	}
   }
   
   /** Method that mirrors the picture around a 

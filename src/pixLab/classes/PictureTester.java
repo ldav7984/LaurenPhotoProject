@@ -18,10 +18,6 @@ public class PictureTester
     beach.explore();
   }
   
-
-  //testKeepOnlyRed();
-  //testKeepOnlyGreen();
-  
   /** Method to test keepOnlyBlue */
   public static void testKeepOnlyBlue()
   {
@@ -40,6 +36,7 @@ public class PictureTester
 	  beach.explore();
   }
   
+  /** Method to test keepOnlyGreen */
   public static void testKeepOnlyGreen()
   {
 	  Picture beach = new Picture("beach.jpg");
@@ -91,13 +88,13 @@ public class PictureTester
     // to run
 	  
     //testZeroBlue(); //done
-    testKeepOnlyBlue();
-    testKeepOnlyRed();
-    testKeepOnlyGreen();
+    //testKeepOnlyBlue(); //done
+    //testKeepOnlyRed(); //done
+    //testKeepOnlyGreen(); //done
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical(); //done
+    testMirrorVertical(); //done
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();

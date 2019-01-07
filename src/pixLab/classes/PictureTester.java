@@ -106,6 +106,15 @@ public class PictureTester
     canvas.explore();
   }
   
+  /** Method to test mirrorTemple */
+  public static void testMirrorGull()
+  {
+	  Picture seagull = new Picture("seagull.jpg");
+	  seagull.explore();
+	  seagull.mirrorGull();
+	  seagull.explore();
+  }
+  
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
@@ -128,14 +137,14 @@ public class PictureTester
     //testKeepOnlyBlue(); //done
     //testKeepOnlyRed(); //done
     //testKeepOnlyGreen(); //done
-    testNegate(); //done
-    testGrayscale(); //done
+    //testNegate(); //done
+    //testGrayscale(); //done
     //testFixUnderwater();
     
     //testMirrorVertical(); //done
-    //testMirrorTemple();
+    //testMirrorTemple(); //done
     //testMirrorArms();
-    //testMirrorGull();
+    testMirrorGull();
     //testMirrorDiagonal();
     
     //testCollage();

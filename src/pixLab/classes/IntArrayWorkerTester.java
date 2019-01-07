@@ -33,6 +33,15 @@ public class IntArrayWorkerTester
     System.out.println("Count should be 6 and count is " + count);
   }
   
+  public static void testGetLargest()
+  {
+	  IntArrayWorker worker = new IntArrayWorker();
+	  int[][] nums = new int[3][4];
+	  worker.setMatrix(nums);
+	  worker.fillPattern1();
+	  
+	  System.out.println("");
+  }
   /** Method to test getTotal */
   public static void testGetTotal()
   {
@@ -99,7 +108,7 @@ public class IntArrayWorkerTester
     testGetCount(); 
     testGetTotal();
     testGetTotalNested();
-    //testGetLargest();
+    testGetLargest();
     //testGetColTotal();
   }
 }

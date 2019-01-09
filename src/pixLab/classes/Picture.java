@@ -232,9 +232,9 @@ public class Picture extends SimplePicture
 	  int height = pixels.length;
 	  int width = pixels[0].length;
 	  
-	  for (int row = 20; row < height - 20; row++)
+	  for (int row = 30; row < height - 30; row++)
 	  {
-		  for (int col = 20; col < width - 20; col++)
+		  for (int col = 30; col < width - 30; col++)
 		  {
 			  firstPixel = pixels[row][col];
 			  

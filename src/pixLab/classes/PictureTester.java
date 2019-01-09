@@ -115,6 +115,14 @@ public class PictureTester
 	  seagull.explore();
   }
   
+  public static void testGlitchify()
+  {
+	  Picture butterfly = new Picture("butterfly1.jpg");
+	  butterfly.explore();
+	  butterfly.glitchify();
+	  butterfly.explore();
+  }
+  
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
@@ -144,10 +152,11 @@ public class PictureTester
     //testMirrorVertical(); //done
     //testMirrorTemple(); //done
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
+    testGlitchify();
     //testMirrorDiagonal();
     
-    testCollage();
+    //testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();

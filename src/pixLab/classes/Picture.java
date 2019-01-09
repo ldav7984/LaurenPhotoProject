@@ -218,10 +218,41 @@ public class Picture extends SimplePicture
         rightPixel = pixels[row][width - 1 - col];
         rightPixel.setColor(leftPixel.getColor()); //to mirror left side onto right
         //leftPixel.setColor(rightPixel.getColor()); //to mirror right side onto left
+        
       }
     } 
   }
   
+  public void glitchify()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel firstPixel = null;
+	  Pixel newPixel = null;
+	  
+	  int height = pixels.length;
+	  int width = pixels[0].length;
+	  
+	  for (int row = 20; row < height - 20; row++)
+	  {
+		  for (int col = 20; col < width - 20; col++)
+		  {
+			  firstPixel = pixels[row][col];
+			  
+			  //pixels[row][col].setGreen(0);
+			
+			  newPixel = pixels[row][width - 1 - col];
+			  newPixel.setColor(firstPixel.getColor());
+			  newPixel.setGreen(255 - newPixel.getGreen());
+			  
+			  newPixel = pixels[height - 1 - row][col];
+			  newPixel.setColor(firstPixel.getColor());
+			  newPixel.setBlue(255 - newPixel.getBlue());
+			  
+			  //firstPixel.setRed(255 - firstPixel.getRed());
+		  }
+	  }
+	  
+  }
  
   
   /** Mirror just part of a picture of a temple */

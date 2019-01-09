@@ -379,6 +379,51 @@ public class Picture extends SimplePicture
     }
   }
   
+  public Color randomColor()
+  {
+	  Color random;
+	  int red = (int) (Math.random() * 256);
+	  int green = (int) (Math.random() * 356);
+	  int blue = (int) (Math.random() * 256);
+	  
+	  random = new Color(red, green, blue);
+	  return random;
+  }
+  
+  public void randomize(int startRow, int startCol, int endRow, int endCol)
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  
+	  for (int row = startRow; row < endRow; row++)
+	  {
+		  for (int col = startCol; col < endCol; col++)
+		  {
+			  int randomNumber = (int) (Math.random() * 10);
+			  if (randomNumber % 7 == 0)
+			  {
+				  pixels[row][col].setColor(randomColor());
+			  }
+		  }
+	  }
+  }
+  
+  public void chromakey(Picture replacement, Color changeColor)
+  {
+	  Pixel [][] mainPixels = this.getPixels2D();
+	  Pixel [][] replacementPixels = replacement.getPixels2D();
+	  
+	  for (int row = 0; row < mainPixels.length; row++)
+	  {
+		  for (int col = 0; col < mainPixels[0].length; col++) 
+		  {
+			  if (mainPixels[row][col].colorDistance(changeColor) < 10)
+			  {
+				 mainPixels[row][col].setColor(replacementPixels[row][col].getColor()); 
+			  }
+		  }
+	  }
+  }
+  
   
   /* Main method for testing - each class in Java can have a main 
    * method 

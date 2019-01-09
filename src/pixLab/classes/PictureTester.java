@@ -1,4 +1,7 @@
 package pixLab.classes;
+
+import java.awt.Color;
+
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -131,6 +134,23 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testRandomize()
+  {
+	  Picture swan = new Picture("swan.jpg");
+	  swan.randomize(0, 0, 50, 50);
+	  swan.explore();
+  }
+  
+  public static void testChromakey()
+  {
+	  Picture source = new Picture("Rayquaza.jpg");
+	  Picture background = new Picture("OuterSpace.jpg");
+	  source.explore();
+	  background.explore();
+	  source.chromakey(background, Color.WHITE);
+	  source.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -153,7 +173,8 @@ public class PictureTester
     //testMirrorTemple(); //done
     //testMirrorArms();
     //testMirrorGull();
-    testGlitchify();
+    //testGlitchify(); //done
+    //testRandomize(); //has issues
     //testMirrorDiagonal();
     
     //testCollage();
@@ -161,7 +182,7 @@ public class PictureTester
     //testEdgeDetection();
     //testEdgeDetection2();
     
-    //testChromakey();
+    testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();

@@ -118,19 +118,29 @@ public class PictureTester
 	  seagull.explore();
   }
   
+  public static void testReflectAndRecolor()
+  {
+	  Picture kyogre = new Picture("Kyogre.jpg");
+	  kyogre.explore();
+	  kyogre.reflectAndRecolor();
+	  kyogre.explore();
+  }
+  
   public static void testGlitchify()
   {
 	  Picture kyogre = new Picture("Kyogre.jpg");
 	  kyogre.explore();
-	  kyogre.glitchify();
+	  kyogre.glitchify(200, 0, 0, 100, 100);
 	  kyogre.explore();
   }
   
-  public static void testShiftLeftRight()
+  
+  public static void testShift()
   {
 	  Picture kyogre = new Picture("Kyogre.jpg");
 	  kyogre.explore();
 	  kyogre.shiftLeftRight(200);
+	  kyogre.shiftUpDown(200);
 	  kyogre.explore();
   }
   
@@ -181,10 +191,12 @@ public class PictureTester
     //testMirrorTemple(); //done
     //testMirrorArms();
     //testMirrorGull();
-    //testGlitchify(); //done
-    //testRandomize(); //has issues
 	  
-	  testShiftLeftRight();
+	//testReflectAndRecolor(); //done
+    //testGlitchify(); //done
+    //testRandomize(); 
+	  
+	testShift();
     //testMirrorDiagonal();
     
     //testCollage();

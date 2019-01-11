@@ -120,10 +120,18 @@ public class PictureTester
   
   public static void testGlitchify()
   {
-	  Picture butterfly = new Picture("butterfly1.jpg");
-	  butterfly.explore();
-	  butterfly.glitchify();
-	  butterfly.explore();
+	  Picture kyogre = new Picture("Kyogre.jpg");
+	  kyogre.explore();
+	  kyogre.glitchify();
+	  kyogre.explore();
+  }
+  
+  public static void testShiftLeftRight()
+  {
+	  Picture kyogre = new Picture("Kyogre.jpg");
+	  kyogre.explore();
+	  kyogre.shiftLeftRight(200);
+	  kyogre.explore();
   }
   
   /** Method to test edgeDetection */
@@ -175,6 +183,8 @@ public class PictureTester
     //testMirrorGull();
     //testGlitchify(); //done
     //testRandomize(); //has issues
+	  
+	  testShiftLeftRight();
     //testMirrorDiagonal();
     
     //testCollage();
@@ -182,7 +192,8 @@ public class PictureTester
     //testEdgeDetection();
     //testEdgeDetection2();
     
-    testChromakey();
+    //testChromakey(); //done
+    
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();

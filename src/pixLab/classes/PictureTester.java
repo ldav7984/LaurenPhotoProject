@@ -155,7 +155,7 @@ public class PictureTester
   public static void testRandomize()
   {
 	  Picture swan = new Picture("swan.jpg");
-	  swan.randomize(0, 0, 50, 50);
+	  swan.randomize(0, 0, 500, 50);
 	  swan.explore();
   }
   
@@ -193,10 +193,10 @@ public class PictureTester
     //testMirrorGull();
 	  
 	//testReflectAndRecolor(); //done
-    //testGlitchify(); //done
+    testGlitchify(); 
     //testRandomize(); 
 	  
-	testShift();
+	//testShift(); //done
     //testMirrorDiagonal();
     
     //testCollage();

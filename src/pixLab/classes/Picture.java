@@ -433,6 +433,22 @@ public class Picture extends SimplePicture
 		  }
 	  }
 	  
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  for (int col = 0; col < pixels[0].length; col++)
+		  {
+			  shiftedValue = (row + amount) % height;
+			  copied[row][col].setColor(pixels[shiftedValue][col].getColor());
+		  }
+	  }
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  for (int col = 0; col < pixels[0].length; col++)
+		  {
+			  pixels[row][col].setColor(copied[row][col].getColor());
+		  }
+	  }
+	  
 	  
 	  //like shift left/right
 	  //row = start row, row less than end row 

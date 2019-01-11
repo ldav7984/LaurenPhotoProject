@@ -130,7 +130,7 @@ public class PictureTester
   {
 	  Picture kyogre = new Picture("Kyogre.jpg");
 	  kyogre.explore();
-	  kyogre.glitchify(200, 0, 0, 100, 100);
+	  kyogre.glitchify(200, 50, 50, 100, 100);
 	  kyogre.explore();
   }
   

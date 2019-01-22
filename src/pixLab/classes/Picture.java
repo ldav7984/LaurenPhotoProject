@@ -419,24 +419,24 @@ public class Picture extends SimplePicture
 	  int height = pixels.length;
 	  
 	  //left/right
-	  for (int row = 0; row < pixels.length; row++)
+	  for (int row = 0; row < 50; row++)
 	  {
-		  for (int col = 0; col < pixels[0].length; col++)
+		  for (int col = 0; col < 50; col++)
 		  {
 			  shiftedValue = (col + amount) % width;
 			  if (amount < 0)
 			  {
-				  shiftedValue = ((col + amount) % width + width) % width;
+				  //shiftedValue = ((col + amount) % width + width) % width;
 				  
-				  //shiftedValue = ((row + amount) % width + width) % width;
+				  shiftedValue = ((row + amount) % width + width) % width;
 				  //looks cool, no longer like a picture though
 			  }
 			  copied[row][col].setColor(pixels[row][shiftedValue].getColor());
 		  }
 	  }
-	  for (int row = 0; row < pixels.length; row++)
+	  for (int row = 0; row < 50; row++)
 	  {
-		  for (int col = 0; col < pixels[0].length; col++)
+		  for (int col = 0; col < 50; col++)
 		  {
 			  pixels[row][col].setColor(copied[row][col].getColor());
 		  }
@@ -451,9 +451,9 @@ public class Picture extends SimplePicture
 			  shiftedValue = (row + amount) % height;
 			  if (amount < 0)
 			  {
-				  shiftedValue = ((row + amount) % height + height) % height;
+				  //shiftedValue = ((row + amount) % height + height) % height;
 				  
-				  //shiftedValue = ((col + amount) % height + height) % height; 
+				  shiftedValue = ((col + amount) % height + height) % height; 
 				  //makes picture look cool but not at all like a picture
 			  }
 			  copied[row][col].setColor(pixels[shiftedValue][col].getColor());

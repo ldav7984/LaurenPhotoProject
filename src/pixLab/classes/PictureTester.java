@@ -137,7 +137,7 @@ public class PictureTester
   
   public static void glitchify()
   {
-	  Picture kyogre = new Picture("Kyogre.jpg");
+	  Picture kyogre = new Picture("SophieCat.jpg");
 	  kyogre.explore();
 	  
 	  int endRow = kyogre.getWidth();

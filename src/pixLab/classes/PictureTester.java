@@ -139,7 +139,7 @@ public class PictureTester
   {
 	  Picture source = new Picture("Kyogre.jpg");
 	  
-	  Picture message = new Picture("PusheenHide.png");
+	  Picture message = new Picture("KyogreHide.jpg");
 	  source.explore();
 	  //message.explore();
 	  source.hidePicture(message);

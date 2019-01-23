@@ -228,10 +228,10 @@ public class PictureTester
 	  
 	//testReflectAndRecolor(); //done
 	//testStripe(); //done
-    //glitchify(); //done
+    glitchify(); //done
     //testRandomize(); //done
 	  
-	testSteganography();
+	//testSteganography();
 	  
 	//testShift(); //done
     //testMirrorDiagonal();

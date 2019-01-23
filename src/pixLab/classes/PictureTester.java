@@ -135,6 +135,19 @@ public class PictureTester
 	  picture.explore();
   }
   
+  public static void testSteganography()
+  {
+	  Picture source = new Picture("Kyogre.jpg");
+	  
+	  Picture message = new Picture("PusheenHide.jpg");
+	  source.explore();
+	  message.explore();
+	  source.hidePicture(message);
+	  source.explore();
+	  source.revealPicture();
+	  source.explore();
+  }
+  
   public static void glitchify()
   {
 	  Picture kyogre = new Picture("Kyogre.jpg");

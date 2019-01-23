@@ -550,6 +550,16 @@ public class Picture extends SimplePicture
 	  }
   }
   
+  public void hidePicture(Picture message)
+  {
+	  
+  }
+  
+  public void revealPicture()
+  {
+	  
+  }
+  
   /* Main method for testing - each class in Java can have a main 
    * method 
    */

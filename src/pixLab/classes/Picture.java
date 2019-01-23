@@ -407,7 +407,8 @@ public class Picture extends SimplePicture
 	  }
   }
   
-  public void glitchify(int amount, int startRow, int endRow, int startCol, int endCol)
+  
+  public void stripe(int amount, int startRow, int endRow, int startCol, int endCol)
   {
 	  Pixel[][] pixels = this.getPixels2D();
 	  Picture temp = new Picture(this);
@@ -526,6 +527,7 @@ public class Picture extends SimplePicture
 	  Pixel [][] copied = temp.getPixels2D();
 	  
 	  int shiftedValue = amount;
+	 
 	  int height = pixels.length;
 	  
 	  for (int row = 0; row < pixels.length; row++)
@@ -555,8 +557,6 @@ public class Picture extends SimplePicture
   public static void main(String[] args) 
   {
     Picture kyogre = new Picture("Kyogre.jpg");
-    kyogre.explore();
-    kyogre.glitchify(200, 50, 50, 100, 100);
     kyogre.explore();
   }
   

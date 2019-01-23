@@ -126,11 +126,24 @@ public class PictureTester
 	  kyogre.explore();
   }
   
-  public static void testGlitchify()
+  public static void testStripe()
+  {
+	  Picture picture = new Picture("Kyogre.jpg");
+	  picture.explore();
+	  picture.stripe(-200, 50, 50, 100, 100);
+	  picture.explore();
+  }
+  
+  public static void glitchify()
   {
 	  Picture kyogre = new Picture("Kyogre.jpg");
 	  kyogre.explore();
-	  kyogre.glitchify(-200, 50, 50, 100, 100);
+	  
+	  kyogre.mirrorVertical();
+	  kyogre.shiftLeftRight(kyogre.getWidth() / 2);
+	  kyogre.shiftUpDown(kyogre.getHeight() / 2);
+	  kyogre.negate();
+	  //kyogre.stripe(200, 50, 50, 100, 100);
 	  kyogre.explore();
   }
   
@@ -139,8 +152,8 @@ public class PictureTester
   {
 	  Picture kyogre = new Picture("Kyogre.jpg");
 	  kyogre.explore();
-	  kyogre.shiftLeftRight(-200);
-	  kyogre.shiftUpDown(-200);
+	  kyogre.shiftLeftRight(kyogre.getWidth() / 2);
+	  kyogre.shiftUpDown(kyogre.getHeight() / 2);
 	  kyogre.explore();
   }
   
@@ -193,7 +206,8 @@ public class PictureTester
     //testMirrorGull();
 	  
 	//testReflectAndRecolor(); //done
-    testGlitchify(); 
+	//testStripe();
+    glitchify(); 
     //testRandomize(); 
 	  
 	//testShift(); //done

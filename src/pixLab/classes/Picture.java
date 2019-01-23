@@ -383,7 +383,7 @@ public class Picture extends SimplePicture
   {
 	  Color random;
 	  int red = (int) (Math.random() * 256);
-	  int green = (int) (Math.random() * 356);
+	  int green = (int) (Math.random() * 256);
 	  int blue = (int) (Math.random() * 256);
 	  
 	  random = new Color(red, green, blue);
@@ -394,9 +394,9 @@ public class Picture extends SimplePicture
   {
 	  Pixel[][] pixels = this.getPixels2D();
 	  
-	  for (int row = startRow; row < endRow; row++)
+	  for (int row = 0; row < pixels.length; row++)
 	  {
-		  for (int col = startCol; col < endCol; col++)
+		  for (int col = 0; col < pixels[0].length; col++)
 		  {
 			  int randomNumber = (int) (Math.random() * 10);
 			  if (randomNumber % 7 == 0)
@@ -415,14 +415,13 @@ public class Picture extends SimplePicture
 	  Pixel [][] copied = temp.getPixels2D();
 	  
 	  int shiftedValue = amount;
-	  
 	  int width = pixels[0].length;
 	  int height = pixels.length;
 	  
 	  //left/right
-	  for (int row = 0; row < 50; row++)
+	  for (int row = 0; row < endRow; row++)
 	  {
-		  for (int col = 0; col < 50; col++)
+		  for (int col = 0; col < endCol; col++)
 		  {
 			  shiftedValue = (col + amount) % width;
 			  if (amount < 0)
@@ -443,8 +442,8 @@ public class Picture extends SimplePicture
 		  }
 	  }
 	  
-	  
 	  //up/down
+	  /**
 	  for (int row = 0; row < pixels.length; row++)
 	  {
 		  for (int col = 0; col < pixels[0].length; col++)
@@ -467,7 +466,7 @@ public class Picture extends SimplePicture
 			  pixels[row][col].setColor(copied[row][col].getColor());
 		  }
 	  }
-	  
+	  **/
 	  
 	  //row = start row, row less than end row 
   }

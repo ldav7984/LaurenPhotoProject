@@ -130,6 +130,7 @@ public class PictureTester
   {
 	  Picture picture = new Picture("Kyogre.jpg");
 	  picture.explore();
+	  
 	  picture.stripe(-200, 50, 50, 100, 100);
 	  picture.explore();
   }
@@ -139,11 +140,16 @@ public class PictureTester
 	  Picture kyogre = new Picture("Kyogre.jpg");
 	  kyogre.explore();
 	  
+	  int endRow = kyogre.getWidth();
+	  int endCol = kyogre.getHeight();
+	  
 	  kyogre.mirrorVertical();
+	  //kyogre.stripe(200, 50, 50, endRow, endCol);
 	  kyogre.shiftLeftRight(kyogre.getWidth() / 2);
 	  kyogre.shiftUpDown(kyogre.getHeight() / 2);
 	  kyogre.negate();
-	  //kyogre.stripe(200, 50, 50, 100, 100);
+	  kyogre.randomize(0, 0, kyogre.getWidth(), kyogre.getHeight());
+	  
 	  kyogre.explore();
   }
   
@@ -168,7 +174,9 @@ public class PictureTester
   public static void testRandomize()
   {
 	  Picture swan = new Picture("swan.jpg");
-	  swan.randomize(0, 0, 500, 50);
+	  int endRow = swan.getWidth();
+	  int endCol = swan.getHeight();
+	  swan.randomize(0, 0, 50, 50);
 	  swan.explore();
   }
   
@@ -208,7 +216,8 @@ public class PictureTester
 	//testReflectAndRecolor(); //done
 	//testStripe();
     glitchify(); 
-    //testRandomize(); 
+	
+    //testRandomize(); //done
 	  
 	//testShift(); //done
     //testMirrorDiagonal();

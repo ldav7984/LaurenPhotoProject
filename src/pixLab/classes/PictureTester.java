@@ -139,9 +139,9 @@ public class PictureTester
   {
 	  Picture source = new Picture("Kyogre.jpg");
 	  
-	  Picture message = new Picture("PusheenHide.jpg");
+	  Picture message = new Picture("PusheenHide.png");
 	  source.explore();
-	  message.explore();
+	  //message.explore();
 	  source.hidePicture(message);
 	  source.explore();
 	  source.revealPicture();
@@ -227,10 +227,11 @@ public class PictureTester
     //testMirrorGull();
 	  
 	//testReflectAndRecolor(); //done
-	testStripe();
-    //glitchify(); 
-	
+	//testStripe(); //done
+    //glitchify(); //done
     //testRandomize(); //done
+	  
+	testSteganography();
 	  
 	//testShift(); //done
     //testMirrorDiagonal();

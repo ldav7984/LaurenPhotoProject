@@ -419,9 +419,9 @@ public class Picture extends SimplePicture
 	  int height = pixels.length;
 	  
 	  //left/right
-	  for (int row = 0; row < endRow; row++)
+	  for (int row = 0; row < pixels.length; row++)
 	  {
-		  for (int col = 0; col < endCol; col++)
+		  for (int col = 0; col < pixels[0].length; col++)
 		  {
 			  shiftedValue = (col + amount) % width;
 			  if (amount < 0)
@@ -434,16 +434,16 @@ public class Picture extends SimplePicture
 			  copied[row][col].setColor(pixels[row][shiftedValue].getColor());
 		  }
 	  }
-	  for (int row = 0; row < 50; row++)
+	  for (int row = 0; row < pixels.length; row++)
 	  {
-		  for (int col = 0; col < 50; col++)
+		  for (int col = 0; col < pixels[0].length; col++)
 		  {
 			  pixels[row][col].setColor(copied[row][col].getColor());
 		  }
 	  }
 	  
 	  //up/down
-	  /**
+	  
 	  for (int row = 0; row < pixels.length; row++)
 	  {
 		  for (int col = 0; col < pixels[0].length; col++)
@@ -466,7 +466,7 @@ public class Picture extends SimplePicture
 			  pixels[row][col].setColor(copied[row][col].getColor());
 		  }
 	  }
-	  **/
+	  
 	  
 	  //row = start row, row less than end row 
   }

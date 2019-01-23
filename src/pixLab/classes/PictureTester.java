@@ -137,7 +137,7 @@ public class PictureTester
   
   public static void glitchify()
   {
-	  Picture kyogre = new Picture("SophieCat.jpg");
+	  Picture kyogre = new Picture("Kyogre.jpg");
 	  kyogre.explore();
 	  
 	  int endRow = kyogre.getWidth();
@@ -214,8 +214,8 @@ public class PictureTester
     //testMirrorGull();
 	  
 	//testReflectAndRecolor(); //done
-	//testStripe();
-    glitchify(); 
+	testStripe();
+    //glitchify(); 
 	
     //testRandomize(); //done
 	  

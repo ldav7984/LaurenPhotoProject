@@ -443,7 +443,6 @@ public class Picture extends SimplePicture
 	  }
 	  
 	  //up/down
-	  
 	  for (int row = 0; row < pixels.length; row++)
 	  {
 		  for (int col = 0; col < pixels[0].length; col++)
@@ -466,8 +465,6 @@ public class Picture extends SimplePicture
 			  pixels[row][col].setColor(copied[row][col].getColor());
 		  }
 	  }
-	  
-	  
 	  //row = start row, row less than end row 
   }
   

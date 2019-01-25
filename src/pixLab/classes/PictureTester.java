@@ -150,18 +150,19 @@ public class PictureTester
   
   public static void glitchify()
   {
-	  Picture kyogre = new Picture("Kyogre.jpg");
+	  Picture kyogre = new Picture("PokemonORAS.jpg");
 	  kyogre.explore();
 	  
 	  int endRow = kyogre.getWidth();
 	  int endCol = kyogre.getHeight();
 	  
-	  kyogre.mirrorVertical();
-	  //kyogre.stripe(200, 50, 50, endRow, endCol);
+	  //kyogre.mirrorVertical();
+	  kyogre.stripe(200, 50, 50, 100, 100);
 	  kyogre.shiftLeftRight(kyogre.getWidth() / 2);
 	  kyogre.shiftUpDown(kyogre.getHeight() / 2);
 	  kyogre.negate();
 	  kyogre.randomize(0, 0, kyogre.getWidth(), kyogre.getHeight());
+	  //kyogre.revealPicture();
 	  
 	  kyogre.explore();
   }

@@ -398,8 +398,8 @@ public class Picture extends SimplePicture
 	  {
 		  for (int col = 0; col < pixels[0].length; col++)
 		  {
-			  int randomNumber = (int) (Math.random() * 10);
-			  if (randomNumber % 7 == 0)
+			  int randomNumber = (int) (Math.random() * 600);
+			  if (randomNumber % 17 == 0)
 			  {
 				  pixels[row][col].setColor(randomColor());
 			  }
@@ -552,7 +552,7 @@ public class Picture extends SimplePicture
 	  Pixel[][] pixels = this.getPixels2D();
 	  Pixel[][] hiddenPixels = hidden.getPixels2D();
 	  
-	  for (int row = 0; row < pixels.length & row < hiddenPixels.length; row++)
+	  for (int row = 0; row < pixels.length && row < hiddenPixels.length; row++)
 	  {
 		  for (int col = 0; col < pixels[0].length && col < hiddenPixels[0].length; col++)
 		  {

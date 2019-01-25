@@ -38,6 +38,38 @@ public class PictureTester
 	  beach.explore();
   }
   
+  public static void testHalveBlue()
+  {
+	  Picture beach =  new Picture("beach.jpg");
+	  beach.explore();
+	  beach.halveBlue();
+	  beach.explore();
+  }
+  
+  public static void testHalveRed()
+  {
+	  Picture beach =  new Picture("beach.jpg");
+	  beach.explore();
+	  beach.halveRed();
+	  beach.explore();
+  }
+  
+  public static void testHalveGreen()
+  {
+	  Picture beach =  new Picture("beach.jpg");
+	  beach.explore();
+	  beach.halveGreen();
+	  beach.explore();
+  }
+  
+  public static void testHalveColors()
+  {
+	  Picture beach =  new Picture("beach.jpg");
+	  beach.explore();
+	  beach.halveColors();
+	  beach.explore();
+  }
+  
   /** Method to test keepOnlyBlue */
   public static void testKeepOnlyBlue()
   {
@@ -148,23 +180,14 @@ public class PictureTester
 	  source.explore();
   }
   
-  public static void glitchify()
+  public static void testGlitchify()
   {
-	  Picture kyogre = new Picture("PokemonORAS.jpg");
-	  kyogre.explore();
+	  Picture glitched = new Picture("PokemonORAS.jpg");
 	  
-	  int endRow = kyogre.getWidth();
-	  int endCol = kyogre.getHeight();
+	  glitched.explore();
+	  glitched.glitchify(glitched);
+	  glitched.explore();
 	  
-	  //kyogre.mirrorVertical();
-	  kyogre.stripe(200, 50, 50, 100, 100);
-	  kyogre.shiftLeftRight(kyogre.getWidth() / 2);
-	  kyogre.shiftUpDown(kyogre.getHeight() / 2);
-	  kyogre.negate();
-	  kyogre.randomize(0, 0, kyogre.getWidth(), kyogre.getHeight());
-	  //kyogre.revealPicture();
-	  
-	  kyogre.explore();
   }
   
   
@@ -215,9 +238,17 @@ public class PictureTester
     //testZeroBlue(); //done
 	//testZeroRed(); //done
 	//testZeroGreen(); //done
+	   
+	//testHalveBlue(); //done
+	//testHalveRed(); //done
+	//testHalveGreen(); //done
+	//testHalveColors(); //done
+	  
     //testKeepOnlyBlue(); //done
     //testKeepOnlyRed(); //done
     //testKeepOnlyGreen(); //done
+	  
+	  
     //testNegate(); //done
     //testGrayscale(); //done
     //testFixUnderwater();
@@ -229,7 +260,11 @@ public class PictureTester
 	  
 	//testReflectAndRecolor(); //done
 	//testStripe(); //done
-    glitchify(); //done
+	  
+	
+    testGlitchify(); 
+    
+    
     //testRandomize(); //done
 	  
 	//testSteganography();

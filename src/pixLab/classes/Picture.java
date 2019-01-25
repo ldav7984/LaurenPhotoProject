@@ -129,6 +129,60 @@ public class Picture extends SimplePicture
 	  }
   }
   
+  public void halveBlue()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  
+	  for (Pixel[] rowArray : pixels)
+	  {
+		  for (Pixel pixelObj : rowArray)
+		  {
+			  pixelObj.setBlue(pixelObj.getBlue() / 2);
+		  }
+	  }
+  }
+  
+  public void halveRed()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  
+	  for (Pixel[] rowArray : pixels)
+	  {
+		  for (Pixel pixelObj : rowArray)
+		  {
+			  pixelObj.setRed(pixelObj.getRed() / 2);
+		  }
+	  }
+  }
+  
+  public void halveGreen()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  
+	  for (Pixel[] rowArray : pixels)
+	  {
+		  for (Pixel pixelObj : rowArray)
+		  {
+			  pixelObj.setGreen(pixelObj.getGreen() / 2);
+		  }
+	  }
+  }
+  
+  public void halveColors()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  
+	  for (Pixel[] rowArray : pixels)
+	  {
+		  for (Pixel pixelObj : rowArray)
+		  {
+			  pixelObj.setBlue(pixelObj.getBlue() / 2);
+			  pixelObj.setRed(pixelObj.getRed() / 2);
+			  pixelObj.setGreen(pixelObj.getGreen() / 2);
+		  }
+	  }
+  }
+  
   /** Method to set red and green to 0 */
   public void keepOnlyBlue()
   {
@@ -379,6 +433,25 @@ public class Picture extends SimplePicture
     }
   }
   
+  public void glitchify(Picture picture)
+  {
+	  //Pixel[][] pixels = this.getPixels2D();
+	  
+	  int endRow = picture.getWidth();
+	  int endCol = picture.getHeight();
+	  
+	  //picture.mirrorVertical();
+	  //picture.stripe(200, 50, 50, 100, 100);
+	  picture.shiftLeftRight(picture.getWidth() / 2);
+	  picture.shiftUpDown(picture.getHeight() / 2);
+	  picture.negate();
+	  picture.randomize(0, 0, picture.getWidth(), picture.getHeight());
+	  //picture.halveRed();
+	  //picture.revealPicture();
+	  
+	  picture.explore();
+  }
+  
   public Color randomColor()
   {
 	  Color random;
@@ -405,6 +478,7 @@ public class Picture extends SimplePicture
 			  }
 		  }
 	  }
+	  //int randomNumber = (int) (Math.random() * picture.getWidth())
   }
   
   
@@ -599,7 +673,7 @@ public class Picture extends SimplePicture
   public static void main(String[] args) 
   {
     Picture kyogre = new Picture("Kyogre.jpg");
-    kyogre.explore();
+    //kyogre.explore();
   }
   
 } // this } is the end of class Picture, put all new methods before this

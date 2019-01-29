@@ -274,9 +274,9 @@ public class PictureTester
     //testKeepOnlyRed(); //done
     //testKeepOnlyGreen(); //done
 	  
-	testSwitchRedBlue();
-	testSwitchRedGreen();
-	testSwitchBlueGreen();
+	//testSwitchRedBlue(); //done
+	//testSwitchRedGreen(); //done
+	//testSwitchBlueGreen(); //done
 	  
     //testNegate(); //done
     //testGrayscale(); //done

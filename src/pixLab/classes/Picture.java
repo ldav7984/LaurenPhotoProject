@@ -484,7 +484,10 @@ public class Picture extends SimplePicture
 	  picture.shiftUpDown(picture.getHeight() / 2);
 	  picture.negate();
 	  picture.randomize(0, 0, picture.getWidth(), picture.getHeight());
-	  picture.halveRed();
+	  //picture.halveRed();
+	  picture.switchRedBlue();
+	  //picture.switchRedGreen();
+	  //picture.switchBlueGreen();
   }
   
   

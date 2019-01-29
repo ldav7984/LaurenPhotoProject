@@ -97,6 +97,32 @@ public class PictureTester
 	  beach.explore();
   }
   
+  /** Method to test keepOnlyGreen */
+  public static void testSwitchRedBlue()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.switchRedBlue();
+	  beach.explore();
+  }
+  
+  /** Method to test keepOnlyGreen */
+  public static void testSwitchRedGreen()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.switchRedGreen();
+	  beach.explore();
+  }
+  
+  /** Method to test keepOnlyGreen */
+  public static void testSwitchBlueGreen()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.switchBlueGreen();
+	  beach.explore();
+  }
   /** Method to test negate */
   public static void testNegate()
   {
@@ -248,6 +274,9 @@ public class PictureTester
     //testKeepOnlyRed(); //done
     //testKeepOnlyGreen(); //done
 	  
+	testSwitchRedBlue();
+	testSwitchRedGreen();
+	testSwitchBlueGreen();
 	  
     //testNegate(); //done
     //testGrayscale(); //done

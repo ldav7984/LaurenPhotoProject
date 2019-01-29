@@ -435,22 +435,17 @@ public class Picture extends SimplePicture
   
   public void glitchify(Picture picture)
   {
-	  //Pixel[][] pixels = this.getPixels2D();
-	  
-	  int endRow = picture.getWidth();
-	  int endCol = picture.getHeight();
-	  
-	  //picture.mirrorVertical();
-	  //picture.stripe(200, 50, 50, 100, 100);
 	  picture.shiftLeftRight(picture.getWidth() / 2);
 	  picture.shiftUpDown(picture.getHeight() / 2);
 	  picture.negate();
 	  picture.randomize(0, 0, picture.getWidth(), picture.getHeight());
-	  //picture.halveRed();
-	  //picture.revealPicture();
-	  
-	  picture.explore();
+	  picture.halveRed();
   }
+  
+  
+//picture.mirrorVertical();
+  //picture.stripe(200, 50, 50, 100, 100);
+  
   
   public Color randomColor()
   {
@@ -500,10 +495,7 @@ public class Picture extends SimplePicture
 			  shiftedValue = (col + amount) % width;
 			  if (amount < 0)
 			  {
-				  //shiftedValue = ((col + amount) % width + width) % width;
-				  
 				  shiftedValue = ((row + amount) % width + width) % width;
-				  //looks cool, no longer like a picture though
 			  }
 			  copied[row][col].setColor(pixels[row][shiftedValue].getColor());
 		  }
@@ -524,10 +516,7 @@ public class Picture extends SimplePicture
 			  shiftedValue = (row + amount) % height;
 			  if (amount < 0)
 			  {
-				  //shiftedValue = ((row + amount) % height + height) % height;
-				  
 				  shiftedValue = ((col + amount) % height + height) % height; 
-				  //makes picture look cool but not at all like a picture
 			  }
 			  copied[row][col].setColor(pixels[shiftedValue][col].getColor());
 		  }

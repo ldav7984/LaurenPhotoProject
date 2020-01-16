@@ -232,6 +232,7 @@ public class PictureTester
     Picture swan = new Picture("swan.jpg");
     swan.edgeDetection(10);
     swan.explore();
+    
   }
   
   public static void testRandomize()
